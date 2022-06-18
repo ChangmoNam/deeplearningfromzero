@@ -9,12 +9,13 @@ class Function01:
         output = Variable(y)
         return output
 
-x = Variable(np.array(10))
-f = Function01()
-y = f(x)
+def test01():
+    x = Variable(np.array(10))
+    f = Function01()
+    y = f(x)
 
-print(type(y))
-print(y.data)
+    print(type(y))
+    print(y.data)
 
 class Function:
     def __call__(self, input):
@@ -30,8 +31,10 @@ class Square(Function):
     def forward(self, x):
         return x**2 # __call__ 메서드가 계승되므로 logic 만 작성하면 okay.
 
-x = Variable(np.array(10))
-f = Square()
-y = f(x)
-print(type(y))
-print(y.data)
+
+def test():
+    x = Variable(np.array(10))
+    f = Square()
+    y = f(x)
+    print(type(y))
+    print(y.data)
